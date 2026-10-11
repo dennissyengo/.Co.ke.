@@ -1,0 +1,1358 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hon. Dennis Syengo | MCA Mulango Ward 2027</title>
+
+    <meta name="description" content="Official campaign website for Hon. Dennis Syengo, MCA Mulango Ward 2027. Explore the vision, manifesto, priorities and community engagement.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --blue: #063b75;
+            --dark-blue: #04264c;
+            --red: #d62828;
+            --white: #ffffff;
+            --light: #f3f6fa;
+            --text: #243247;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--light);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font: inherit;
+        }
+
+        /* HEADER */
+
+        header {
+            background: var(--blue);
+            color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: auto;
+            min-height: 76px;
+            padding: 12px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            color: var(--white);
+            font-size: 19px;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+
+        .brand span {
+            display: block;
+            color: #ffd166;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 17px;
+        }
+
+        nav a {
+            color: var(--white);
+            font-size: 13px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        .menu-btn {
+            display: none;
+            color: white;
+            background: transparent;
+            border: 0;
+            font-size: 32px;
+            cursor: pointer;
+            padding: 3px 8px;
+        }
+
+        /* GENERAL SECTIONS */
+
+        section {
+            padding: 65px 20px;
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: auto;
+        }
+
+        .section-title {
+            color: var(--blue);
+            text-align: center;
+            font-size: clamp(25px, 4vw, 34px);
+            margin-bottom: 12px;
+        }
+
+        .section-intro {
+            max-width: 720px;
+            text-align: center;
+            margin: 0 auto 35px;
+            color: #586579;
+        }
+
+        .red-line {
+            width: 65px;
+            height: 4px;
+            background: var(--red);
+            border-radius: 10px;
+            margin: 0 auto 22px;
+        }
+
+        /* HERO */
+
+        .hero {
+            color: white;
+            background:
+                linear-gradient(120deg, rgba(4, 38, 76, 0.97),
+                rgba(6, 59, 117, 0.83));
+            padding: 55px 20px;
+        }
+
+        .hero-grid {
+            max-width: 1120px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-label {
+            display: inline-block;
+            background: var(--red);
+            padding: 7px 14px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 5vw, 54px);
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 span {
+            color: #ffd166;
+        }
+
+        .hero p {
+            color: #edf3fb;
+            margin-bottom: 25px;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            border: none;
+            border-radius: 30px;
+            padding: 12px 21px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .btn-red {
+            background: var(--red);
+            color: white;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--blue);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-image {
+            background: white;
+            padding: 10px;
+            border-radius: 24px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 410px;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 17px;
+        }
+
+        /* QUICK MESSAGE */
+
+        .quick-message {
+            background: var(--red);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 28px;
+            border-radius: 22px;
+            box-shadow: 0 5px 20px rgba(18, 42, 75, 0.08);
+            border-bottom: 4px solid var(--blue);
+        }
+
+        .info-card h3 {
+            color: var(--blue);
+            margin-bottom: 12px;
+        }
+
+        .info-card p {
+            color: #566276;
+        }
+
+        /* VISION AND MISSION */
+
+        .vision-section {
+            background: #e8eff8;
+        }
+
+        .vision-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .vision-card {
+            background: white;
+            padding: 30px;
+            border-radius: 25px 25px 25px 7px;
+            border-left: 5px solid var(--red);
+            box-shadow: 0 8px 25px rgba(18, 42, 75, 0.09);
+        }
+
+        .vision-card .symbol {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .vision-card h3 {
+            color: var(--blue);
+            margin-bottom: 10px;
+        }
+
+        /* MANIFESTO */
+
+        .manifesto-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .manifesto-card {
+            background: white;
+            padding: 25px;
+            border-radius: 22px;
+            box-shadow: 0 6px 20px rgba(18, 42, 75, 0.08);
+            transition: 0.3s;
+        }
+
+        .manifesto-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .manifesto-card .number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--blue);
+            color: white;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-bottom: 14px;
+        }
+
+        .manifesto-card h3 {
+            color: var(--blue);
+            margin-bottom: 10px;
+        }
+
+        .manifesto-card p {
+            color: #586579;
+            font-size: 14px;
+        }
+
+        /* PRIORITIES */
+
+        .priorities-section {
+            background: var(--dark-blue);
+            color: white;
+        }
+
+        .priorities-section .section-title {
+            color: white;
+        }
+
+        .priorities-section .section-intro {
+            color: #dce7f5;
+        }
+
+        .priorities-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 17px;
+        }
+
+        .priority {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.13);
+            padding: 24px 15px;
+            border-radius: 20px;
+        }
+
+        .priority .symbol {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .priority h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .priority p {
+            font-size: 13px;
+            color: #dce7f5;
+        }
+
+        /* CAMPAIGN GALLERY */
+
+        .gallery-section {
+            background: #f8fafc;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(18, 42, 75, 0.12);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 290px;
+            object-fit: cover;
+            object-position: center;
+            background: #e4eaf2;
+        }
+
+        .gallery-caption {
+            padding: 19px;
+        }
+
+        .gallery-caption h3 {
+            color: var(--blue);
+            margin-bottom: 6px;
+        }
+
+        .gallery-caption p {
+            color: #586579;
+            font-size: 14px;
+        }
+
+        /* SHARE IDEAS FORM */
+
+        .ideas-section {
+            background: #e8eff8;
+        }
+
+        .form-card {
+            max-width: 750px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 24px;
+            box-shadow: 0 8px 28px rgba(18, 42, 75, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            color: var(--blue);
+            margin-bottom: 7px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 13px;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            outline: none;
+            background: #fff;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px rgba(6, 59, 117, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 125px;
+            resize: vertical;
+        }
+
+        .form-card .btn {
+            width: 100%;
+        }
+
+        .form-note {
+            font-size: 12px;
+            color: #667085;
+            margin-top: 12px;
+        }
+
+        /* SUPPORT */
+
+        .support-section {
+            text-align: center;
+            background: white;
+        }
+
+        .support-box {
+            background: linear-gradient(120deg, var(--blue), var(--dark-blue));
+            color: white;
+            padding: 40px 25px;
+            border-radius: 28px;
+        }
+
+        .support-box h2 {
+            font-size: clamp(25px, 4vw, 35px);
+            margin-bottom: 12px;
+        }
+
+        .support-box p {
+            max-width: 700px;
+            margin: 0 auto 22px;
+            color: #e6eef8;
+        }
+
+        /* CONTACT */
+
+        .contact-section {
+            background: #e8eff8;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 20px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .contact-card h3 {
+            color: var(--blue);
+            margin-bottom: 8px;
+        }
+
+        .contact-card p {
+            overflow-wrap: anywhere;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #031a34;
+            color: white;
+            text-align: center;
+            padding: 25px 18px;
+        }
+
+        footer p {
+            font-size: 13px;
+            margin: 5px 0;
+            color: #d5dfec;
+        }
+
+        .back-top {
+            display: inline-block;
+            margin-top: 12px;
+            color: #ffd166;
+            font-weight: bold;
+        }
+
+        /* MOBILE RESPONSIVENESS */
+
+        @media (max-width: 950px) {
+            .menu-btn {
+                display: block;
+            }
+
+            .header-container {
+                min-height: 70px;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: var(--dark-blue);
+                padding: 12px 20px 20px;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                max-height: calc(100vh - 70px);
+                overflow-y: auto;
+            }
+
+            nav.show {
+                display: flex;
+            }
+
+            nav a {
+                padding: 12px 8px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+                font-size: 15px;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero-content p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-image {
+                max-width: 500px;
+                width: 100%;
+                margin: auto;
+            }
+
+            .manifesto-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .priorities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 650px) {
+            section {
+                padding: 48px 16px;
+            }
+
+            .about-grid,
+            .vision-grid,
+            .manifesto-grid,
+            .gallery-grid,
+            .contact-grid,
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 40px 16px;
+            }
+
+            .hero-image img {
+                height: auto;
+                max-height: 500px;
+                object-fit: contain;
+            }
+
+            .gallery-item img {
+                height: 300px;
+            }
+
+            .priorities-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+            }
+
+            .priority {
+                padding: 20px 10px;
+            }
+
+            .form-card {
+                padding: 22px 17px;
+            }
+
+            .brand {
+                font-size: 16px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER AND NAVIGATION -->
+
+    <header>
+        <div class="header-container">
+
+            <a href="#home" class="brand">
+                HON. DENNIS SYENGO
+                <span>MCA MULANGO WARD 2027</span>
+            </a>
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                aria-label="Open navigation menu"
+                aria-controls="navMenu"
+                aria-expanded="false"
+                type="button">
+                ☰
+            </button>
+
+            <nav id="navMenu">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#vision">Vision</a>
+                <a href="#manifesto">Manifesto</a>
+                <a href="#priorities">Priorities</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#ideas">Share Ideas</a>
+                <a href="#support">Support</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- MAIN HOME SECTION -->
+
+        <section class="hero" id="home">
+            <div class="hero-grid">
+
+                <div class="hero-content">
+                    <span class="hero-label">MULANGO WARD 2027</span>
+
+                    <h1>
+                        HON. DENNIS SYENGO
+                        <span>FOR MCA</span>
+                    </h1>
+
+                    <p>
+                        A community-focused campaign built around listening,
+                        accountability, responsible leadership and practical
+                        development priorities for Mulango Ward.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#manifesto" class="btn btn-red">
+                            Explore the Manifesto
+                        </a>
+
+                        <a href="#ideas" class="btn btn-white">
+                            Share Your Ideas
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img
+                        src="dennis-poster.jpg"
+                        alt="Hon. Dennis Syengo campaign poster"
+                        onerror="this.onerror=null; this.alt='Add your campaign poster as dennis-poster.jpg'; this.style.minHeight='250px'; this.style.objectFit='contain';">
+                </div>
+
+            </div>
+        </section>
+
+        <div class="quick-message">
+            MULANGO WARD 2027 — LISTENING, ACCOUNTABILITY AND COMMUNITY DEVELOPMENT
+        </div>
+
+        <!-- ABOUT -->
+
+        <section id="about">
+            <div class="container">
+
+                <h2 class="section-title">About the Campaign</h2>
+                <div class="red-line"></div>
+
+                <p class="section-intro">
+                    A platform for community engagement, open dialogue and
+                    discussion of the priorities that matter to Mulango Ward.
+                </p>
+
+                <div class="about-grid">
+
+                    <div class="info-card">
+                        <h3>Who Is Hon. Dennis Syengo?</h3>
+                        <p>
+                            This section can introduce the candidate's
+                            background, experience, community involvement
+                            and public-service record. Add verified details
+                            to help visitors learn more about the candidate.
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Our Approach</h3>
+                        <p>
+                            The campaign provides a space for residents to
+                            raise concerns, discuss development needs and
+                            understand proposed priorities for Mulango Ward.
+                            Community feedback is an important part of that
+                            conversation.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- VISION AND MISSION -->
+
+        <section class="vision-section" id="vision">
+            <div class="container">
+
+                <h2 class="section-title">Vision &amp; Mission</h2>
+                <div class="red-line"></div>
+
+                <p class="section-intro">
+                    A framework for discussing the future of Mulango Ward.
+                </p>
+
+                <div class="vision-grid">
+
+                    <div class="vision-card">
+                        <div class="symbol">🌟</div>
+                        <h3>Our Vision</h3>
+                        <p>
+                            A well-served Mulango Ward where residents can
+                            participate in public decisions and pursue
+                            opportunities for social and economic progress.
+                        </p>
+                    </div>
+
+                    <div class="vision-card">
+                        <div class="symbol">🤝</div>
+                        <h3>Our Mission</h3>
+                        <p>
+                            To promote consultation, transparent leadership,
+                            responsible use of public resources and constructive
+                            engagement on local development priorities.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- MANIFESTO -->
+
+        <section id="manifesto">
+            <div class="container">
+
+                <h2 class="section-title">Our Manifesto</h2>
+                <div class="red-line"></div>
+
+                <p class="section-intro">
+                    Proposed areas of focus for discussion with residents.
+                    Final commitments should reflect local needs and available
+                    resources.
+                </p>
+
+                <div class="manifesto-grid">
+
+                    <article class="manifesto-card">
+                        <div class="number">01</div>
+                        <h3>Roads &amp; Accessibility</h3>
+                        <p>
+                            Engage relevant authorities on local road
+                            maintenance, access routes and safer movement
+                            within the ward.
+                        </p>
+                    </article>
+
+                    <article class="manifesto-card">
+                        <div class="number">02</div>
+                        <h3>Water Access</h3>
+                        <p>
+                            Support dialogue on water access, conservation
+                            and practical community water projects.
+                        </p>
+                    </article>
+
+                    <article class="manifesto-card">
+                        <div class="number">03</div>
+                        <h3>Education</h3>
+                        <p>
+                            Promote fair information on bursary opportunities
+                            and advocate for support for learners in need.
+                        </p>
+                    </article>
+
+                    <article class="manifesto-card">
+                        <div class="number">04</div>
+                        <h3>Youth Opportunities</h3>
+                        <p>
+                            Encourage skills development, sports, mentorship
+                            and access to information about employment
+                            and enterprise opportunities.
+                        </p>
+                    </article>
+
+                    <article class="manifesto-card">
+                        <div class="number">05</div>
+                        <h3>Health &amp; Community Welfare</h3>
+                        <p>
+                            Raise community health-service concerns with
+                            the relevant authorities and encourage public
+                            participation in local welfare initiatives.
+                        </p>
+                    </article>
+
+                    <article class="manifesto-card">
+                        <div class="number">06</div>
+                        <h3>Accountability</h3>
+                        <p>
+                            Encourage public participation, clear communication
+                            and responsible oversight of ward-level development
+                            priorities.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- DEVELOPMENT PRIORITIES -->
+
+        <section class="priorities-section" id="priorities">
+            <div class="container">
+
+                <h2 class="section-title">Key Development Priorities</h2>
+                <div class="red-line"></div>
+
+                <p class="section-intro">
+                    Important areas for listening to residents and identifying
+                    practical solutions together.
+                </p>
+
+                <div class="priorities-grid">
+
+                    <div class="priority">
+                        <div class="symbol">🛣️</div>
+                        <h3>Roads</h3>
+                        <p>Accessibility and road maintenance.</p>
+                    </div>
+
+                    <div class="priority">
+                        <div class="symbol">💧</div>
+                        <h3>Water</h3>
+                        <p>Water access and conservation.</p>
+                    </div>
+
+                    <div class="priority">
+                        <div class="symbol">📚</div>
+                        <h3>Education</h3>
+                        <p>Education support and bursary information.</p>
+                    </div>
+
+                    <div class="priority">
+                        <div class="symbol">🌱</div>
+                        <h3>Agriculture</h3>
+                        <p>Community farming and livelihood concerns.</p>
+                    </div>
+
+                    <div class="priority">
+                        <div class="symbol">🏥</div>
+                        <h3>Health</h3>
+                        <p>Local health-service concerns.</p>
+                    </div>
+
+                    <div class="priority">
+                        <div class="symbol">💼</div>
+                        <h3>Youth</h3>
+                        <p>Skills, enterprise and opportunity awareness.</p>
+                    </div>
+
+                    <div class="priority">
+                        <div class="symbol">🏪</div>
+                        <h3>Markets</h3>
+                        <p>Trading spaces and local business concerns.</p>
+                    </div>
+
+                    <div class="priority">
+                        <div class="symbol">📢</div>
+                        <h3>Accountability</h3>
+                        <p>Participation and public communication.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CAMPAIGN GALLERY: THREE PHOTOS -->
+
+        <section class="gallery-section" id="gallery">
+            <div class="container">
+
+                <h2 class="section-title">Campaign Gallery</h2>
+                <div class="red-line"></div>
+
+                <p class="section-intro">
+                    Campaign photographs, community meetings and activities.
+                </p>
+
+                <div class="gallery-grid">
+
+                    <article class="gallery-item">
+                        <img
+                            src="dennis1.jpg"
+                            alt="Hon. Dennis Syengo campaign photograph one"
+                            loading="lazy"
+                            onerror="this.onerror=null; this.alt='Place the first campaign photo in the website folder as dennis1.jpg'; this.style.minHeight='200px';">
+
+                        <div class="gallery-caption">
+                            <h3>Leadership</h3>
+                            <p>
+                                A campaign photograph of Hon. Dennis Syengo.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item">
+                        <img
+                            src="dennis2.jpg"
+                            alt="Hon. Dennis Syengo campaign photograph two"
+                            loading="lazy"
+                            onerror="this.onerror=null; this.alt='Place the second campaign photo in the website folder as dennis2.jpg'; this.style.minHeight='200px';">
+
+                        <div class="gallery-caption">
+                            <h3>Community Engagement</h3>
+                            <p>
+                                Moments from community meetings and activities.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item">
+                        <img
+                            src="dennis3.jpg"
+                            alt="Hon. Dennis Syengo campaign photograph three"
+                            loading="lazy"
+                            onerror="this.onerror=null; this.alt='Place the third campaign photo in the website folder as dennis3.jpg'; this.style.minHeight='200px';">
+
+                        <div class="gallery-caption">
+                            <h3>Mulango Ward</h3>
+                            <p>
+                                Photographs highlighting local activities
+                                and community engagement.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SHARE IDEAS FORM -->
+
+        <section class="ideas-section" id="ideas">
+            <div class="container">
+
+                <h2 class="section-title">Share Your Ideas</h2>
+                <div class="red-line"></div>
+
+                <p class="section-intro">
+                    Share a suggestion, identify a local concern or propose
+                    a development priority for consideration.
+                </p>
+
+                <form class="form-card" id="ideasForm">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="visitorName">Your Name</label>
+                            <input
+                                type="text"
+                                id="visitorName"
+                                placeholder="Enter your name"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pollingStation">Polling Station</label>
+                            <select id="pollingStation" required>
+                                <option value="">Select polling station</option>
+                                <option>Wii</option>
+                                <option>Mithongo</option>
+                                <option>Yakalia</option>
+                                <option>Katulani</option>
+                                <option>Nzunguni</option>
+                                <option>Maaamani</option>
+                                <option>Nzukini</option>
+                                <option>Kaumba</option>
+                                <option>Kyambiti</option>
+                                <option>Kyangunga</option>
+                                <option>Kamale</option>
+                                <option>Syilumani</option>
+                                <option>Kwa Muli</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="otherStationGroup" hidden>
+                        <label for="otherStation">Enter Polling Station</label>
+                        <input
+                            type="text"
+                            id="otherStation"
+                            placeholder="Enter polling station name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="concern">Area of Concern</label>
+                        <select id="concern" required>
+                            <option value="">Select an area</option>
+                            <option>Roads</option>
+                            <option>Water</option>
+                            <option>Education and Bursaries</option>
+                            <option>Health</option>
+                            <option>Youth Opportunities</option>
+                            <option>Agriculture</option>
+                            <option>Markets and Business</option>
+                            <option>Accountability</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ideaMessage">Your Idea or Message</label>
+                        <textarea
+                            id="ideaMessage"
+                            placeholder="Write your suggestion here..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-red">
+                        Share Through WhatsApp
+                    </button>
+
+                    <p class="form-note">
+                        Your message will be prepared in WhatsApp for you
+                        to review and send. This HTML-only form does not
+                        save submissions in a database.
+                    </p>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- SUPPORT -->
+
+        <section class="support-section" id="support">
+            <div class="container">
+
+                <div class="support-box">
+                    <h2>Be Part of the Conversation</h2>
+
+                    <p>
+                        Participate respectfully, share constructive ideas
+                        and help keep discussions about Mulango Ward's
+                        development open and informative.
+                    </p>
+
+                    <a href="#ideas" class="btn btn-white">
+                        Share Your Ideas
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+
+        <section class="contact-section" id="contact">
+            <div class="container">
+
+                <h2 class="section-title">Contact the Campaign</h2>
+                <div class="red-line"></div>
+
+                <p class="section-intro">
+                    Add verified official contact details here so visitors
+                    know how to reach the campaign.
+                </p>
+
+                <div class="contact-grid">
+
+                    <div class="contact-card">
+                        <h3>📍 Location</h3>
+                        <p>Mulango Ward, Kitui County, Kenya</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>📞 Phone</h3>
+                        <p>+254 717 514262</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>✉️ Email</h3>
+                        <p>dennissyengo@gmail.com</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <h3>Hon. Dennis Syengo</h3>
+        <p>MCA Mulango Ward 2027</p>
+        <p>
+            Campaign website for community information and engagement.
+        </p>
+        <p>
+            &copy; <span id="year"></span> Hon. Dennis Syengo Campaign.
+        </p>
+
+        <a href="#home" class="back-top">Back to Top ↑</a>
+    </footer>
+
+    <script>
+        // MOBILE HAMBURGER MENU
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navMenu = document.getElementById("navMenu");
+
+        menuBtn.addEventListener("click", function () {
+            const isOpen = navMenu.classList.toggle("show");
+
+            menuBtn.textContent = isOpen ? "×" : "☰";
+            menuBtn.setAttribute("aria-expanded", String(isOpen));
+            menuBtn.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation menu" : "Open navigation menu"
+            );
+        });
+
+        // CLOSE THE MENU AFTER CLICKING A LINK
+
+        navMenu.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navMenu.classList.remove("show");
+                menuBtn.textContent = "☰";
+                menuBtn.setAttribute("aria-expanded", "false");
+                menuBtn.setAttribute("aria-label", "Open navigation menu");
+            });
+        });
+
+        // SHOW THE OTHER POLLING STATION FIELD
+
+        const pollingStation = document.getElementById("pollingStation");
+        const otherStationGroup = document.getElementById("otherStationGroup");
+        const otherStation = document.getElementById("otherStation");
+
+        pollingStation.addEventListener("change", function () {
+            const isOther = pollingStation.value === "Other";
+
+            otherStationGroup.hidden = !isOther;
+            otherStation.required = isOther;
+
+            if (!isOther) {
+                otherStation.value = "";
+            }
+        });
+
+        // CAMPAIGN WHATSAPP NUMBER
+        // Replace this placeholder with the official number.
+        // Use country code 254, without +, spaces or dashes.
+
+        const campaignWhatsApp = "254717514262";
+
+        // SHARE IDEAS THROUGH WHATSAPP
+
+        document.getElementById("ideasForm").addEventListener(
+            "submit",
+            function (event) {
+                event.preventDefault();
+
+                const name =
+                    document.getElementById("visitorName").value.trim();
+
+                let station = pollingStation.value;
+
+                if (station === "Other") {
+                    station = otherStation.value.trim();
+                }
+
+                const concern =
+                    document.getElementById("concern").value;
+
+                const message =
+                    document.getElementById("ideaMessage").value.trim();
+
+                if (!name || !station || !concern || !message) {
+                    alert("Please complete all required fields.");
+                    return;
+                }
+
+                if (
+                    campaignWhatsApp.includes("X") ||
+                    !/^254\d{9}$/.test(campaignWhatsApp)
+                ) {
+                    alert(
+                        "Please add the official campaign WhatsApp number " +
+                        "in the JavaScript section before using this form."
+                    );
+                    return;
+                }
+
+                const whatsappMessage =
+                    "MULANGO WARD CAMPAIGN - COMMUNITY IDEA\n\n" +
+                    "Name: " + name + "\n" +
+                    "Polling Station: " + station + "\n" +
+                    "Area of Concern: " + concern + "\n" +
+                    "Idea/Message: " + message;
+
+                const whatsappURL =
+                    "https://wa.me/" + campaignWhatsApp +
+                    "?text=" + encodeURIComponent(whatsappMessage);
+
+                window.open(whatsappURL, "_blank", "noopener,noreferrer");
+            }
+        );
+
+        // AUTOMATIC COPYRIGHT YEAR
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
